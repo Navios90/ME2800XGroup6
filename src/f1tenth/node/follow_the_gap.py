@@ -21,7 +21,7 @@ class FollowTheGap:
         scan_topic = rospy.get_param("~scan_topic", "/scan")
 
         # Make a publisher for drive messages
-        self.drive_pub = rospy.Publisher(drive_topic, AckermannDriveStamped, queue_size=1)
+        self.drive_pub = rospy.Publisher("/drive", AckermannDriveStamped, queue_size=1)
 
         # Start a subscriber to listen to odom messages
         #self.odom_sub = rospy.Subscriber(odom_topic, Odometry, self.odom_callback)
